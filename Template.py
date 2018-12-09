@@ -5,23 +5,14 @@ from functools import partial
 import pandas
 
 import matplotlib.pyplot as plt
-from gerrychain import (
-    Election,
-    GeographicPartition,
-    Graph,
-    MarkovChain,
-    Partition,
-    accept,
-    constraints,
-    proposals,
-    updaters,
-)
+from gerrychain import (Election, GeographicPartition, Graph, MarkovChain,
+                        Partition, accept, constraints, proposals, updaters)
 from gerrychain.tree_proposals import recom
 
 # ## Setting up the initial districting plan
 
 # Load the graph we want to use.
-graph = Graph.from_json("./PA_VTD.json")
+graph = Graph.from_json("./graphs/rook/PA_VTD.json")
 
 
 # Configure our elections, telling GerryChain which column names for our shapefiles
